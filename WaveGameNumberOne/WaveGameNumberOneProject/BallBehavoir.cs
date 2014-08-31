@@ -32,20 +32,20 @@ namespace WaveGameNumberOneProject
         protected override void Update(TimeSpan gameTime)
         {
             // Check target
-            if (currentPosition.X == targetCollider.Center.X
-                && currentPosition.Y == targetCollider.Center.Y)
-            {
-                //TODO: Let owner scene know that the map is successfully finished
-            }
+            //if (currentPosition.X == targetCollider.Center.X
+            //    && currentPosition.Y == targetCollider.Center.Y)
+            //{
+            //    //TODO: Let owner scene know that the map is successfully finished
+            //}
 
             // Check dynamicElements
-            Entity collideEntity = dynamicElements.FirstOrDefault(entity => entity.Value.Intersects(currentPosition.Rectangle, true)).Key;
+            //Entity collideEntity = dynamicElements.FirstOrDefault(entity => entity.Value.Intersects(currentPosition.Rectangle, true)).Key;
 
-            if (collideEntity != null)
-            {
-                (Owner.Scene as GameScene).CurrentState = GameScene.GameState.CollideDynamic;
-                (Owner.Scene as GameScene).CollideEntity = collideEntity;
-            }
+            //if (collideEntity != null)
+            //{
+            //    (Owner.Scene as GameScene).CurrentState = GameScene.GameState.CollideDynamic;
+            //    (Owner.Scene as GameScene).CollideEntity = collideEntity;
+            //}
 
             // Move ball
             var state = WaveServices.Input.GyroscopeState;
